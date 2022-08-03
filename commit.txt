@@ -6,7 +6,4 @@
 6 commit
 
 test for slack
-test  for   tabs  
-test    for    tabs
-                    
-	1	2	3
+test	for		tabs	
