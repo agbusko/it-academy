@@ -23,7 +23,7 @@ jobs:
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "$file was changed"
-            echo "Tabs: $(grep -P -o '\t' $file | wc -l)" >> count_tabs.txt 2>&1
+            echo "Tabs in file $file: $(grep -P -o '\t' $file | wc -l)" >> count_tabs.txt 2>&1
           done
 
       - uses: actions/upload-artifact@v3
