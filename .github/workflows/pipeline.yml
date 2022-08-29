@@ -14,3 +14,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      -
+        name: Build the Docker image
+        run: docker build -t listener:v1 .
+      -
+        name: Tag the Docker image
+        run: docker tag listener:v1 agbusko/listener
+      -
+        name: Push the Docker image to the registry
+        run: docker push agbusko/listener
